@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: red !important;
+    color: white !important;
+    font-family: Arial !important;
+}
+
+.navbar {
+    background: blue !important;
+    color: white !important;
+    padding: 20px !important;
+}
+
+.hero {
+    background: green !important;
+    padding: 100px !important;
+    text-align: center !important;
+}
+
+.cta-button {
+    background: orange !important;
+    color: black !important;
+    padding: 15px 30px !important;
+    border: none !important;
+    border-radius: 5px !important;
+}

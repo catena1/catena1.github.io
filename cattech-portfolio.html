@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cattech - Full Stack Developer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            line-height: 1.6;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+        .navbar {
+            background: #1e293b;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .hero {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .hero-tag {
+            background: #06d6a0;
+            color: #1e293b;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .cta-button {
+            background: #06d6a0;
+            color: #1e293b;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        .about {
+            background: #1e293b;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #06d6a0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .skill-category {
+            background: #0f172a;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+        .skill-category h3 {
+            color: #06d6a0;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        .skill-list {
+            text-align: left;
+        }
+        .skill-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #334155;
+        }
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+        .projects {
+            background: #0f172a;
+            padding: 80px 20px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+        .project-card h3 {
+            color: #06d6a0;
+            margin-bottom: 1rem;
+        }
+        .contact {
+            background: #1e293b;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .footer {
+            background: #0f172a;
+            color: #64748b;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">cattech</nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm cattech</h1>
+            <div class="hero-badge">Full Stack Developer</div>
+            <div class="hero-tags">
+                <span class="hero-tag">Linux Enthusiast</span>
+                <span class="hero-tag">Termux Expert</span>
+                <span class="hero-tag">Code Innovator</span>
+            </div>
+            <p>Building exceptional digital experiences from mobile to cloud</p>
+            <button class="cta-button">View My Projects</button>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Passionate full-stack developer specializing in creating robust web applications. 
+               Expert in mobile development with Termux, Linux systems, and cutting-edge technologies.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">HTML5 & CSS3</div>
+                        <div class="skill-item">JavaScript ES6+</div>
+                        <div class="skill-item">React.js</div>
+                        <div class="skill-item">Responsive Design</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Express.js</div>
+                        <div class="skill-item">RESTful APIs</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">Termux</div>
+                        <div class="skill-item">Linux/Unix</div>
+                        <div class="skill-item">Git & GitHub</div>
+                        <div class="skill-item">Mobile Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Mobile Portfolio</h3>
+                    <p>Built entirely using Termux on Android</p>
+                    <p><strong>Tech:</strong> HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="project-card">
+                    <h3>Termux Automation</h3>
+                    <p>Scripts and tools for mobile development</p>
+                    <p><strong>Tech:</strong> Bash, Python, Node.js</p>
+                </div>
+                <div class="project-card">
+                    <h3>Web Applications</h3>
+                    <p>Full-stack solutions for modern problems</p>
+                    <p><strong>Tech:</strong> React, Node.js, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Ready to bring your ideas to life? Let's create something amazing together.</p>
+            <button class="cta-button" style="margin-top: 2rem;">Contact Me</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 cattech. Built with ❤️ using Termux</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Mobile Development Specialist</p>
+    </footer>
+
+    <script>
+        // Smooth scroll to projects
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            document.querySelector('.projects').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+
+        // Smooth scroll to contact
+        document.querySelectorAll('.cta-button')[1].addEventListener('click', function() {
+            document.querySelector('.contact').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>
