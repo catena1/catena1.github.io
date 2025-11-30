@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Tabs</title>
+    <style>
+        .tab { padding: 10px; margin: 5px; background: blue; color: white; }
+        .content { display: none; padding: 20px; }
+        .active { background: red; }
+        .show { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Simple Tab Test</h1>
+    
+    <div class="tab" onclick="showTab('tab1')">Tab 1</div>
+    <div class="tab" onclick="showTab('tab2')">Tab 2</div>
+    
+    <div id="tab1" class="content show">
+        <h2>Tab 1 Content</h2>
+        <p>This is tab 1 - if you can see this, tabs work!</p>
+    </div>
+    
+    <div id="tab2" class="content">
+        <h2>Tab 2 Content</h2>
+        <p>This is tab 2</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('show');
+            });
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected content and activate tab
+            document.getElementById(tabId).classList.add('show');
+            event.target.classList.add('active');
+            
+            alert('Tab clicked: ' + tabId);
+        }
+    </script>
+</body>
+</html>
