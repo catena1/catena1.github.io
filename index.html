@@ -3,70 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cattech - Full Stack Developer</title>
+    <title>cattedn - Full Stack Developer & Termux Expert</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background: #0f172a;
-            color: #f8fafc;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .bonus-alert {
+            background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+            border-radius: 12px;
+            padding: 12px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+        
+        .bonus-text {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .bonus-amount {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
             text-align: center;
-            padding: 50px;
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #4ecca3;
+        }
+        
+        .profile-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #eeeeee;
+        }
+        
+        .profile-description {
+            font-size: 18px;
+            max-width: 600px;
             line-height: 1.6;
+            color: #b0b0b0;
         }
-        .navbar {
-            background: #1e293b;
-            padding: 1rem;
-            margin: -50px -50px 50px -50px;
+        
+        .skills-section {
+            margin-bottom: 40px;
         }
-        .name { 
-            color: #06d6a0; 
-            font-size: 3rem; 
-            font-weight: bold;
-            margin: 30px 0;
+        
+        .skills-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4ecca3;
         }
-        .tagline { 
-            font-size: 1.3rem;
-            margin: 20px 0;
-            color: #94a3b8;
+        
+        .skills-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
         }
-        .skills {
-            margin: 40px 0;
+        
+        .tablinks {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #4ecca3;
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
         }
-        .skill-tag {
-            background: #06d6a0;
-            color: #1e293b;
-            padding: 8px 16px;
-            margin: 5px;
+        
+        .tablinks:hover {
+            background: #4ecca3;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(78, 204, 163, 0.4);
+        }
+        
+        .tablinks.active {
+            background: #4ecca3;
+            box-shadow: 0 5px 15px rgba(78, 204, 163, 0.4);
+        }
+        
+        .skill-content {
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
-            display: inline-block;
-            font-weight: bold;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            min-height: 300px;
         }
-        .footer {
-            margin-top: 50px;
-            color: #64748b;
+        
+        .tabcontent {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tabcontent h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #4ecca3;
+        }
+        
+        .tabcontent p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 15px;
+        }
+        
+        .tabcontent ul {
+            margin-left: 20px;
+        }
+        
+        .tabcontent li {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3); }
+            50% { box-shadow: 0 4px 20px rgba(255, 107, 107, 0.6); }
+            100% { box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">cattech</div>
-    
-    <h1>Hello, I'm</h1>
-    <div class="name">cattech</div>
-    <div class="tagline">Full Stack Developer & Termux Expert</div>
-    <p>Building amazing web applications from mobile to cloud</p>
-    
-    <div class="skills">
-        <div class="skill-tag">JavaScript</div>
-        <div class="skill-tag">React</div>
-        <div class="skill-tag">Node.js</div>
-        <div class="skill-tag">Python</div>
-        <div class="skill-tag">Termux</div>
+    <div class="container">
+        <div class="bonus-alert">
+            <div class="bonus-text">Big Bonus Alert! • now</div>
+            <div class="bonus-amount">Claim your ₩100 FREE airtime + ₩9...</div>
+        </div>
+        
+        <div class="profile-section">
+            <h1 class="profile-name">Hello, I'm cattedn</h1>
+            <h2 class="profile-title">Full Stack Developer & Termux Expert</h2>
+            <p class="profile-description">Building amazing web applications from mobile to cloud</p>
+        </div>
+        
+        <div class="skills-section">
+            <h2 class="skills-title">My Skills & Expertise</h2>
+            
+            <div class="skills-tabs">
+                <button class="tablinks" onclick="openTab(event, 'JavaScript')">JavaScript</button>
+                <button class="tablinks" onclick="openTab(event, 'React')">React</button>
+                <button class="tablinks" onclick="openTab(event, 'Nodejs')">Node.js</button>
+                <button class="tablinks" onclick="openTab(event, 'Python')">Python</button>
+                <button class="tablinks" onclick="openTab(event, 'Termux')">Termux</button>
+            </div>
+            
+            <div class="skill-content">
+                <div id="JavaScript" class="tabcontent">
+                    <h3>JavaScript Expertise</h3>
+                    <p>I have extensive experience with modern JavaScript (ES6+):</p>
+                    <ul>
+                        <li>Frontend development with vanilla JS and frameworks</li>
+                        <li>Asynchronous programming and API integration</li>
+                        <li>DOM manipulation and event handling</li>
+                        <li>Building interactive web applications</li>
+                    </ul>
+                </div>
+                
+                <div id="React" class="tabcontent">
+                    <h3>React Development</h3>
+                    <p>Specialized in building dynamic user interfaces with React:</p>
+                    <ul>
+                        <li>Component-based architecture</li>
+                        <li>State management with hooks</li>
+                        <li>Integration with backend APIs</li>
+                        <li>Single-page applications</li>
+                    </ul>
+                </div>
+                
+                <div id="Nodejs" class="tabcontent">
+                    <h3>Node.js Backend Development</h3>
+                    <p>Building robust server-side applications with Node.js:</p>
+                    <ul>
+                        <li>RESTful API development with Express.js</li>
+                        <li>Database integration</li>
+                        <li>Authentication systems</li>
+                        <li>Real-time applications</li>
+                    </ul>
+                </div>
+                
+                <div id="Python" class="tabcontent">
+                    <h3>Python Programming</h3>
+                    <p>Versatile Python development for various applications:</p>
+                    <ul>
+                        <li>Web development with Django and Flask</li>
+                        <li>Data analysis and visualization</li>
+                        <li>Automation scripts and tools</li>
+                        <li>Integration with other technologies</li>
+                    </ul>
+                </div>
+                
+                <div id="Termux" class="tabcontent">
+                    <h3>Termux Expertise</h3>
+                    <p>Mobile development and Linux environment on Android:</p>
+                    <ul>
+                        <li>Setting up development environments on mobile</li>
+                        <li>Running servers directly from Android</li>
+                        <li>SSH and remote development workflows</li>
+                        <li>Scripting and automation with Termux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="footer">
-        <p>📍 Built entirely on Android using Termux</p>
-        <p>🌐 Visit: cattech.github.io</p>
-    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            // Remove active class from all tabs
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show the current tab and add active class
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Show the first tab by default when page loads
+        document.getElementById("JavaScript").style.display = "block";
+        document.getElementsByClassName("tablinks")[0].className += " active";
+    </script>
 </body>
 </html>
